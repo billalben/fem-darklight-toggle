@@ -5,7 +5,8 @@ const darkLabel = document.querySelector("label[for='dark']");
 const lightLabel = document.querySelector("label[for='light']");
 
 const setDarkMode = () => {
-  document.querySelector("body").classList = "dark";
+  document.querySelector("body").classList.remove("light");
+  document.querySelector("body").classList.add("dark");
 
   darkLabel.style.display = "none";
   lightLabel.style.display = "block";
@@ -14,7 +15,9 @@ const setDarkMode = () => {
 };
 
 const setLightMode = () => {
-  document.querySelector("body").classList = "light";
+  document.querySelector("body").classList.remove("dark");
+  document.querySelector("body").classList.add("light");
+
   lightLabel.style.display = "none";
   darkLabel.style.display = "block";
   localStorage.setItem("colorMode", "light");
@@ -33,7 +36,7 @@ const colorModeFromPreferences = () => {
 const loadAndUpdateColor = () => {
   // local storage has precedence over the prefers-color-scheme
   const color = colorModeFromLocalStorage() || colorModeFromPreferences();
-  color == "dark" ? darkButton.click() : lightButton.click();
+  color === "dark" ? darkButton.click() : lightButton.click();
 };
 
 // when the inputs are clicked, check which radio button is checked and change the color
