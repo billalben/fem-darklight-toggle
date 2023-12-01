@@ -12,9 +12,11 @@
     font-weight: 700;
     color: var(--toggle);
 
-    &[for="dark"] {
+    &[for="dark"],
+    &[for="light"] {
       line-height: rem(24);
       margin-right: rem(13);
+      cursor: pointer;
     }
   }
 
@@ -28,6 +30,7 @@
     opacity: 0;
     width: rem(24);
     height: rem(24);
+    cursor: pointer;
 
     &:focus ~ .toggle__button {
       border: 2px solid white;

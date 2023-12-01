@@ -26,7 +26,7 @@
 
     <style>
       .attribution {
-        font-size: .775rem;
+        font-size: 0.775rem;
         text-align: center;
         margin-block: 1rem;
       }
@@ -47,16 +47,14 @@
         aria-label="theme toggle"
         role="radiogroup"
       >
-        <label for="dark"
-          >Dark Mode <span class="visually-hidden">On</span></label
-        >
+        <label for="dark">Dark Mode On</label>
+        <label for="light">Dark Mode Off </label>
         <div class="toggle__wrapper">
           <input type="radio" name="theme" id="dark" />
           <input type="radio" name="theme" id="light" />
           <span aria-hidden="true" class="toggle__background"></span>
           <span aria-hidden="true" class="toggle__button"></span>
         </div>
-        <label for="light" class="visually-hidden">Dark Mode Off</label>
       </fieldset>
     </header>
 
